@@ -14,12 +14,12 @@ const WelcomeScreen = ({ navigation }) => {
                     style={styles.buttonView}
                 />
                 <Button
-                    onPress={() => navigation.navigate('StartGame')}
+                    onPress={() => navigation.navigate('Records')}
                     title="Рекорди"
                     style={styles.buttonView}
                 />
                 <Button
-                    onPress={() => navigation.navigate('StartGame')}
+                    onPress={() => navigation.navigate('About')}
                     title="Про додаток"
                     style={styles.buttonView}
                 />

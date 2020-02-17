@@ -31,7 +31,7 @@ const StartGameScreen = ({ navigation, active }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f9e79f',
+        backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
         justifyContent: 'space-around',
