@@ -7,11 +7,9 @@ const Grid = props => {
     const [findNumber, setFindNumber] = useState(1);
     const [tries, setTries] = useState(3);
     const [restNums, setRestNums] = useState(35);
-    let activeGame = props.active;
+    const [isActive, setIsActive] = useState(props.active);
+    
     const handleSelectedNum = (num) => {
-        // console.log("find", findNumber);
-        // console.log('restNums', restNums);
-        
         if (tries > 0 && restNums > 0) {
             if (num !== findNumber) {
                 setTries(tries - 1);
@@ -22,14 +20,13 @@ const Grid = props => {
             }
         }
         else {
-            console.log("stop the timer and game");
-            activeGame = false;
+            setIsActive(false);
         }
     };
 
     return (
         <View>
-            <Info next={findNumber} active={activeGame} try={tries} />
+            <Info next={findNumber} active={isActive} try={tries} />
             <View style={styles.main}>
                 {props.numbers.map((number) => <Cell key={number.toString()} value={number} onReturnNum={handleSelectedNum} />)}
             </View>
@@ -42,7 +39,7 @@ const styles = StyleSheet.create({
         width: 310,
         height: 310,
         marginTop: 100,
-        backgroundColor: '#ccc',
+        backgroundColor: '#fef9e7',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between'
