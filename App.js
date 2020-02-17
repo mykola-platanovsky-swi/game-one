@@ -6,6 +6,8 @@ import StartGameScreen from './screens/StartGameScreen';
 import IntroScreen from './screens/IntroScreen';
 import AboutScreen from './screens/AboutScreen';
 import RecordsScreen from './screens/RecordsScreen';
+import LostGameScreen from './screens/LostGameScreen';
+import WonGameScreen from './screens/WonGameScreen';
 
 
 const navigator = createStackNavigator(
@@ -14,7 +16,9 @@ const navigator = createStackNavigator(
     StartGame: StartGameScreen, 
     Intro: IntroScreen,
     About: AboutScreen,
-    Records: RecordsScreen
+    Records: RecordsScreen,
+    LostGame: LostGameScreen,
+    Won: WonGameScreen
   },
   {
     initialRouteName: 'Welcome',

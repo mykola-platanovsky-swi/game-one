@@ -17,7 +17,7 @@ const StartGameScreen = ({ navigation, active }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-                <Grid numbers={generateNumbers()} active={active} />
+                <Grid numbers={generateNumbers()} active={active} navigation={navigation}/>
                 <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}

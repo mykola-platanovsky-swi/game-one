@@ -13,6 +13,7 @@ const AboutScreen = ({ navigation }) => {
                         title="Додому"
                     />
                 </View>
+                <View><Text>@mplata</Text></View>
             </View>
         </React.Fragment>
     );
@@ -21,7 +22,7 @@ const AboutScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f9e79f',
+        backgroundColor: '#d7bde2',
         alignItems: 'center',
         justifyContent: 'center',
         justifyContent: 'space-around',
