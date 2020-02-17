@@ -5,7 +5,7 @@ const Cell = props => {
     const pressCellHandler = () =>{
         props.onReturnNum(props.value);
     };
-
+    
     return (
         <TouchableOpacity onPress={pressCellHandler} style={styles.cell}>
             <Text>{props.value}</Text>
