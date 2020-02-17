@@ -4,35 +4,34 @@ import Timer from './Timer';
 
 const Info = props => {
     return (
-        <View style={styles.info}>
+        <View style={styles.container}>
             <View style={styles.advice}>
-                <Text>Шукай: {props.next}</Text>
+                <Text>Знайди: {props.next}</Text>
                 <Text>Спроб: {props.try}</Text>
             </View>
             <View style={styles.timer}>
                 <Text>Витрачено часу:</Text>
-                <Timer active={props.active}/>
+                <Timer active={props.active} />
             </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    info: {
+    container: {
         paddingTop: 10,
         flexDirection: 'row',
-        width: '90%'
+        width: 350,
+        height: 100,
+        backgroundColor: 'white',
+        padding: 5
+
     },
     advice: {
-        width: '50%',
-        height: 40,
-        //backgroundColor: 'green',
+        flex: 1,
     },
     timer: {
-        height: 40,
-        //backgroundColor: 'red',
-        width: '50%',
-        alignItems: 'center',        
+        flex: 1,
     }
 });
 

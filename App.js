@@ -45,7 +45,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: 'Welcome',
     defaultNavigationOptions: {
-      title: 'APAC Game Studio'
+      title: 'Презентація React Native'
     }
   }
 );

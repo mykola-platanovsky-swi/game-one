@@ -10,7 +10,7 @@ const getRamaining = (time) => {
 
 const Timer = props => {
     const [remainingSecs, setRemainingSecs] = useState(0);
-    const [isActive, setIsActive] = useState(props.active);
+    const [isActive, setIsActive] = useState(true);
     const { mins, secs } = getRamaining(remainingSecs);
 
     const toogle = () => {

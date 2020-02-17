@@ -25,9 +25,9 @@ const Grid = props => {
     };
 
     return (
-        <View>
-            <Info next={findNumber} active={isActive} try={tries} />
-            <View style={styles.main}>
+        <View style={styles.container}>
+            <Info next={findNumber} active={isActive} try={tries} style={styles.info} />
+            <View style={styles.grid}>
                 {props.numbers.map((number) => <Cell key={number.toString()} value={number} onReturnNum={handleSelectedNum} />)}
             </View>
         </View>
@@ -35,15 +35,26 @@ const Grid = props => {
 };
 
 const styles = StyleSheet.create({
-    main: {
-        width: 310,
-        height: 310,
-        marginTop: 100,
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    grid: {
+        minWidth: 310,
+        minHeight: 310,
+        width: 350,
+        height: 350,
+        marginTop: 30,
         backgroundColor: '#fef9e7',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around',
     },
+    info: {
+      
+    }
 });
 
 export default Grid;

@@ -14,27 +14,32 @@ const generateNumbers = () => {
 
 const StartGameScreen = ({ navigation, active }) => {
     return (
-        <View style={styles.container}>
-            <Grid numbers={generateNumbers()} active={active} />
-            <Button
-                onPress={() => navigation.navigate('Welcome')}
-                title="Додому"
-                style={styles.button}
-            />
-        </View>
+        <React.Fragment>
+            <View style={styles.container}>
+                <Grid numbers={generateNumbers()} active={active} />
+                <View style={styles.viewButton}>
+                    <Button
+                        onPress={() => navigation.navigate('Welcome')}
+                        title="Додому"
+                    />
+                </View>
+            </View>
+        </React.Fragment>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ca6f1e',
-        alignContent: 'center',
-        //justifyContent: 'center',
+        backgroundColor: '#f9e79f',
+        alignItems: 'center',
+        justifyContent: 'center',
+        justifyContent: 'space-around',
     },
-    button: {
-        paddingTop: 10,
+    viewButton: {
         width: '90%',
+        paddingVertical: 50,
+        color: '#fff'
     }
 });
 
