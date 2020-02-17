@@ -3,10 +3,11 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Cell = props => {
     const pressCellHandler = () =>{
+        props.onReturnNum(props.value);
     };
 
     return (
-        <TouchableOpacity onPress={props.onPress} style={styles.cell}>
+        <TouchableOpacity onPress={pressCellHandler} style={styles.cell}>
             <Text>{props.value}</Text>
         </TouchableOpacity>
     );

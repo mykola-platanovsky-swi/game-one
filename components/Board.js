@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import Grid from './Grid';
 import Info from './Info';
 
 const Board = () => {
+    const [isNewGame, setIsNewGame] = useState(false);
+    const [currentNum, setCurrentNum] = useState(0);
+    const [tryNum, setTryNum] = useState(3);
+
+    const startGameHandler = () => {
+        setIsNewGame(!isNewGame);
+    };
+
     return (
         <View style={styles.board}>
             <View style={styles.escape}>
-                <Button title="Здатися"/>
+                <Button title="Здатися" onPress = {startGameHandler}/>
             </View>
-            <Info/>
-            <Grid />
+            <Info next={"1"} active={isNewGame} try={tryNum}/>
+            <Grid try={tryNum} next={"1"} active={isNewGame} />
         </View>
     );
 };
@@ -31,7 +39,8 @@ const styles = StyleSheet.create({
     },
     button: {
 
-    }
+    },
+
 });
 
 export default Board;

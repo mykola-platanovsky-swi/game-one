@@ -1,11 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Timer from './Timer';
 
-const Info = () => {
+const Info = props => {
     return (
         <View style={styles.info}>
-            <View style={styles.advice}><Text>Шукай: 8</Text></View>
-            <View style={styles.timer}><Text>00:12</Text></View>
+            <View style={styles.advice}>
+                <Text>Шукай: {props.next}</Text>
+                <Text>Спроб: {props.try}</Text>
+            </View>
+            <View style={styles.timer}>
+                <Text>Витрачено часу:</Text>
+                <Timer active={props.active}/>
+            </View>
         </View>
     );
 };
@@ -18,13 +25,14 @@ const styles = StyleSheet.create({
     },
     advice: {
         width: '50%',
-        height: 30,
-        backgroundColor: 'green',
+        height: 40,
+        //backgroundColor: 'green',
     },
     timer: {
-        height: 30,
-        backgroundColor: 'red',
-        width: '50%'
+        height: 40,
+        //backgroundColor: 'red',
+        width: '50%',
+        alignItems: 'center',        
     }
 });
 

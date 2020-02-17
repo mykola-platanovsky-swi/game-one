@@ -8,7 +8,6 @@ export default function App() {
       <Board />
       <View style={styles.button}>
         <Button 
-          onPress={()=>console.log('press')} 
           title="Ще разок? Піднажми..." 
           color={'#f7dc6f'}
         />
@@ -20,7 +19,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#212f3d',
+    backgroundColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
       },
