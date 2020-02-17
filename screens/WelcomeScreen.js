@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Image, Button, Text } from 'react-native';
+import { View, StyleSheet, Image, Text } from 'react-native';
+import BatButton from '../components/BatButton';
+
 
 const WelcomeScreen = ({ navigation }) => {
     return (
@@ -8,17 +10,17 @@ const WelcomeScreen = ({ navigation }) => {
             <View><Text style={styles.text}>Підпільна Ігрова студія AS APAC Game</Text></View>
             <View><Text style={styles.text}>נאָך יאָ</Text></View>
             <View style={styles.buttons}>
-                <Button
+                <BatButton
                     onPress={() => navigation.navigate('Intro')}
                     title="Гра"
                     style={styles.buttonView}
                 />
-                <Button
+                <BatButton
                     onPress={() => navigation.navigate('Records')}
                     title="Рекорди"
                     style={styles.buttonView}
                 />
-                <Button
+                <BatButton
                     onPress={() => navigation.navigate('About')}
                     title="Про додаток"
                     style={styles.buttonView}

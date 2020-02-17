@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Image, Button, Text } from 'react-native';
+import { View, StyleSheet, Image, Text } from 'react-native';
 import Spacer from '../components/Spacer';
+import BatButton from '../components/BatButton';
 
 const IntroScreen = ({ navigation }) => {
     const text1 = "Високоповажний гравцю! (читати голосом Бетмена).";
@@ -14,7 +15,7 @@ const IntroScreen = ({ navigation }) => {
                 <Text style={styles.text}>{text2}</Text>
             </View>
             <View style={styles.buttonView}>
-            <Button
+            <BatButton
                 onPress={() => navigation.navigate('StartGame')}
                 title="Почати"                
             />
@@ -33,7 +34,9 @@ const styles = StyleSheet.create({
     textView: {
         padding: 20,
         alignContent: 'center',
-        backgroundColor: '#f9e79f'
+        backgroundColor: '#f9e79f',
+        borderRadius: 10,
+        width: '90%'
     },
     text: {
         fontSize: 20

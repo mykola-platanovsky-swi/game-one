@@ -8,7 +8,7 @@ const Cell = props => {
     
     return (
         <TouchableOpacity onPress={pressCellHandler} style={styles.cell}>
-            <Text>{props.value}</Text>
+            <Text style={styles.text}>{props.value}</Text>
         </TouchableOpacity>
     );
 };
@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 1
     },
+    text: {
+        fontSize: 18
+    }
 });
 
 export default Cell;

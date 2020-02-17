@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image, Button, Text } from 'react-native';
-import Spacer from '../components/Spacer';
+import BatButton from '../components/BatButton';
 
 const AboutScreen = ({ navigation }) => {
         return (
@@ -8,7 +8,7 @@ const AboutScreen = ({ navigation }) => {
             <View style={styles.container}>
                 <View><Text>Презентація React Native 21.02.2020</Text></View>
                 <View style={styles.viewButton}>
-                    <Button
+                    <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
                     />

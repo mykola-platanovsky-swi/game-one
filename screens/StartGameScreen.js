@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Grid from '../components/Grid';
+import BatButton from '../components/BatButton';
 
 const generateNumbers = () => {
     let numbers = [];
@@ -18,7 +19,7 @@ const StartGameScreen = ({ navigation, active }) => {
             <View style={styles.container}>
                 <Grid numbers={generateNumbers()} active={active} />
                 <View style={styles.viewButton}>
-                    <Button
+                    <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
                     />
@@ -31,7 +32,7 @@ const StartGameScreen = ({ navigation, active }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000',
+        backgroundColor: '#85c1e9',
         alignItems: 'center',
         justifyContent: 'center',
         justifyContent: 'space-around',
