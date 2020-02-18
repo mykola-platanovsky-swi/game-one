@@ -6,12 +6,12 @@ const LostGameScreen = ({ navigation }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-                <View><Text style={styles.text}>Слабак!</Text></View>
+                <View><Text style={styles.text}>Зберися! Я знаю ти зможеш!</Text></View>
                 <Image source={require('../assets/slap.jpg')} style={styles.image}/>
                 <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
-                        title="Бігти додому в сльозах. Ма..."
+                        title="Ні, я не зможу..."
                     />
                 </View>
             </View>

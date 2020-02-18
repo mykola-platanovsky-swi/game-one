@@ -7,7 +7,8 @@ const WelcomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Image source={require('../assets/logo_bat.jpg')} />
-            <View><Text style={styles.text}>Підпільна Ігрова студія AS APAC Game</Text></View>
+            <View><Text style={styles.text}>Підпільна Ігрова студія</Text></View>
+            <View><Text style={styles.text}>AS APAC Games</Text></View>
             <View><Text style={styles.text}>נאָך יאָ</Text></View>
             <View style={styles.buttons}>
                 <BatButton
