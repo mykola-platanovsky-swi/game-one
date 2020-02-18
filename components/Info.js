@@ -6,11 +6,11 @@ const Info = props => {
     return (
         <View style={styles.container}>
             <View style={styles.advice}>
-                <Text>Знайди: {props.next}</Text>
-                <Text>Спроб: {props.try}</Text>
+                <Text style={styles.text}>Знайди: {props.next}</Text>
+                <Text style={styles.text}>Спроб: {props.try}</Text>
             </View>
             <View style={styles.timer}>
-                <Text>Витрачено часу:</Text>
+                <Text style={styles.text}>Витрачено часу:</Text>
                 <Timer active={props.active} />
             </View>
         </View>
@@ -32,6 +32,9 @@ const styles = StyleSheet.create({
     },
     timer: {
         flex: 1,
+    },
+    text: {
+        fontSize: 18
     }
 });
 

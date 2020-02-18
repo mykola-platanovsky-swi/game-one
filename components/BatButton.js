@@ -11,15 +11,15 @@ const BatButton = props => {
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 20,
+        fontSize: 18,
         color: '#ffffff',
         textAlign: 'center'
     },
     button: {
-        padding: 10,
+        padding: 15,
         backgroundColor: '#ec7063',
         borderRadius: 10,
-        height: 60
+        height: 70
     }
 });
 

@@ -37,13 +37,16 @@ const Timer = props => {
 
     return (
         <View>
-            <Text>{`${mins}:${secs}`}</Text>
+            <Text style={styles.text}>{`${mins}:${secs}`}</Text>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-
+text: {
+    fontSize: 18,
+    color: 'red'
+}
 });
 
 export default Timer;

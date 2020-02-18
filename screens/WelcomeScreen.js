@@ -6,18 +6,18 @@ import BatButton from '../components/BatButton';
 const WelcomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/logo_bat.jpg')}/>
+            <Image source={require('../assets/logo_bat.jpg')} />
             <View><Text style={styles.text}>Підпільна Ігрова студія AS APAC Game</Text></View>
             <View><Text style={styles.text}>נאָך יאָ</Text></View>
             <View style={styles.buttons}>
                 <BatButton
                     onPress={() => navigation.navigate('Intro')}
-                    title="Гра"
+                    title="Нова гра"
                     style={styles.buttonView}
                 />
                 <BatButton
                     onPress={() => navigation.navigate('Records')}
-                    title="Рекорди"
+                    title="Зала слави"
                     style={styles.buttonView}
                 />
                 <BatButton
@@ -34,17 +34,18 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        paddingTop: 40
     },
     buttons: {
         flex: 3,
-        width: '90%',
+        width: '80%',        
         alignContent: 'center',
         justifyContent: 'space-around'
 
     },
     text: {
-        fontSize: 18,        
+        fontSize: 18,
         fontWeight: 'bold'
     },
     buttonView: {

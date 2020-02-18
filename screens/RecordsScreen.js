@@ -25,7 +25,7 @@ const RecordsScreen = ({ navigation }) => {
         return (
             <React.Fragment>
             <View style={styles.container}>
-                <View><Text style={styles.header}>Зал Слави ім. Чака</Text></View>
+                <View><Text style={styles.header}>Зала слави ім. Чака</Text></View>
                 <FlatList
                         data={DATA}
                         renderItem={({ item }) => <Item title={item.name} score={item.score}/>}
