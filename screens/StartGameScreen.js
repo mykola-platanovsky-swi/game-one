@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     },
     viewButton: {
         width: '90%',
-        paddingVertical: 50,
+        paddingVertical: 20,
         color: '#fff'
     }
 });
