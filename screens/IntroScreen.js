@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import Spacer from '../components/Spacer';
 import BatButton from '../components/BatButton';
+import { Audio } from 'expo';
 
 const IntroScreen = ({ navigation }) => {
     const text1 = "Високоповажний гравцю! (читати голосом Бетмена).";
@@ -11,14 +12,14 @@ const IntroScreen = ({ navigation }) => {
             <Image source={require('../assets/batman.jpg')} />
             <View style={styles.textView}>
                 <Text style={styles.text}>{text1}</Text>
-                <Spacer size={20}/>
+                <Spacer size={20} />
                 <Text style={styles.text}>{text2}</Text>
             </View>
             <View style={styles.buttonView}>
-            <BatButton
-                onPress={() => navigation.navigate('StartGame')}
-                title="Почати"                
-            />
+                <BatButton
+                    onPress={() => navigation.navigate('StartGame')}
+                    title="Почати"
+                />
             </View>
         </View>
     );

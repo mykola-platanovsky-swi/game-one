@@ -2,7 +2,6 @@ import React from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import BatButton from '../components/BatButton';
 
-
 const WelcomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>

@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     small: {
         fontSize: 18
     }
-
 });
 
 export default WonGameScreen;
