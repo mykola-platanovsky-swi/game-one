@@ -14,16 +14,19 @@ const WelcomeScreen = ({ navigation }) => {
                     onPress={() => navigation.navigate('Intro')}
                     title="Нова гра"
                     style={styles.buttonView}
+                    customStyle={{backgroundColor: '#ff0000'}}
                 />
                 <BatButton
                     onPress={() => navigation.navigate('Records')}
                     title="Зала слави"
                     style={styles.buttonView}
+                    customStyle={{backgroundColor: '#ff6200'}}
                 />
                 <BatButton
                     onPress={() => navigation.navigate('About')}
                     title="Про додаток"
                     style={styles.buttonView}
+                    customStyle={{backgroundColor: '#ffbf00'}}
                 />
             </View>
         </View>

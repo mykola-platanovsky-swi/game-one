@@ -19,6 +19,7 @@ const IntroScreen = ({ navigation }) => {
                 <BatButton
                     onPress={() => navigation.navigate('StartGame')}
                     title="Почати"
+                    customStyle={{backgroundColor: '#ff6200'}}
                 />
             </View>
         </View>

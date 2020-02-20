@@ -35,6 +35,7 @@ const RecordsScreen = ({ navigation }) => {
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
+                        customStyle={{backgroundColor: '#04bf49'}}
                     />
                 </View>
             </View>

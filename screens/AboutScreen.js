@@ -3,17 +3,18 @@ import { View, StyleSheet, Text } from 'react-native';
 import BatButton from '../components/BatButton';
 
 const AboutScreen = ({ navigation }) => {
-        return (
-            <React.Fragment>
+    return (
+        <React.Fragment>
             <View style={styles.container}>
                 <View><Text style={styles.text}>Презентація React Native 21.02.2020</Text></View>
                 <View><Text style={styles.text}>@mplata</Text></View>
-                <View style={styles.viewButton}>                
+                <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
+                        customStyle={{ backgroundColor: '#7704bf' }}
                     />
-                </View>                
+                </View>
             </View>
         </React.Fragment>
     );

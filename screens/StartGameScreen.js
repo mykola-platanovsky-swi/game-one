@@ -22,6 +22,7 @@ const StartGameScreen = ({ navigation, active }) => {
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
+                        customStyle={{backgroundColor: '#0095ff'}}
                     />
                 </View>
             </View>

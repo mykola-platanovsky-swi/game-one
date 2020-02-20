@@ -12,6 +12,7 @@ const LostGameScreen = ({ navigation }) => {
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Ні, я не зможу..."
+                        customStyle={{backgroundColor: '#7704bf'}}
                     />
                 </View>
             </View>

@@ -14,6 +14,7 @@ const WonGameScreen = ({ navigation }) => {
                     <BatButton
                         onPress={() => navigation.navigate('Records')}
                         title="До Зали Слави!"
+                        customStyle={{backgroundColor: '#7704bf'}}
                     />
                 </View>
                 
