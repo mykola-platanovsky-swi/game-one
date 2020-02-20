@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
         height: "16%",
         borderWidth: 1,
         color: '#fff',
-        borderColor: '#ddd',
+        borderColor: '#abccf7',
         justifyContent: 'center',
         alignItems: 'center',
         margin: 1
     },
     text: {
-        fontSize: 18
+        fontSize: 19
     }
 });
 

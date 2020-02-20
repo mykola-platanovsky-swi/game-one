@@ -10,7 +10,7 @@ const Info = props => {
                 <Text style={styles.text}>Спроб: {props.try}</Text>
             </View>
             <View style={styles.timer}>
-                <Text style={styles.text}>Витрачено часу:</Text>
+                <Text style={styles.text}>Витрачено часу</Text>
                 <Timer active={props.active} />
             </View>
         </View>
@@ -19,10 +19,10 @@ const Info = props => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 10,
+        paddingTop: 5,
         flexDirection: 'row',
-        width: 350,
-        height: 100,
+        width: '90%',
+        height: 70,
         backgroundColor: 'white',
         padding: 5
 

@@ -35,7 +35,7 @@ const RecordsScreen = ({ navigation }) => {
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
-                        customStyle={{backgroundColor: '#04bf49'}}
+                        customStyle={{backgroundColor: '#0a4ecc'}}
                     />
                 </View>
             </View>
@@ -46,10 +46,8 @@ const RecordsScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#7dcea0',
+        backgroundColor: '#c9e0ff',
         alignItems: 'center',
-        //justifyContent: 'center',
-        //justifyContent: 'space-around',
     },
     viewButton: {
         width: '90%',
@@ -60,15 +58,15 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
     header: {
-        fontSize: 25,
+        fontSize: 23,
         color: '#000',
-        padding: 10
+        padding: 20
     },
     item: {
-        backgroundColor: '#138d75',
+        backgroundColor: '#408ef7',
         padding: 10,
         marginVertical: 5,
-        width: '100%'
+        width: '100%',
     }
 });
 

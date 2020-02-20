@@ -14,7 +14,7 @@ const WelcomeScreen = ({ navigation }) => {
                     onPress={() => navigation.navigate('Intro')}
                     title="Нова гра"
                     style={styles.buttonView}
-                    customStyle={{backgroundColor: '#ff0000'}}
+                    customStyle={{backgroundColor: '#f25f55'}}
                 />
                 <BatButton
                     onPress={() => navigation.navigate('Records')}
@@ -42,17 +42,15 @@ const styles = StyleSheet.create({
     },
     buttons: {
         flex: 3,
-        width: '80%',        
+        width: '75%',        
         alignContent: 'center',
-        justifyContent: 'space-around'
-
+        justifyContent: 'space-evenly'
     },
     text: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold'
     },
-    buttonView: {
-        flex: 1,
+    buttonView: {      
         width: 300,
         height: 50
     }

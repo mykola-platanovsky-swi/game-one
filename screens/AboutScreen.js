@@ -6,7 +6,7 @@ const AboutScreen = ({ navigation }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-                <View><Text style={styles.text}>Презентація React Native 21.02.2020</Text></View>
+            <View><Text style={styles.text}>Презентація React Native 26.02.2020</Text></View>
                 <View><Text style={styles.text}>@mplata</Text></View>
                 <View style={styles.viewButton}>
                     <BatButton

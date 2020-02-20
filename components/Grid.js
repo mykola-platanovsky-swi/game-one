@@ -51,13 +51,15 @@ const styles = StyleSheet.create({
         width: 350,
         height: 350,
         marginTop: 30,
-        backgroundColor: '#fef9e7',
+        backgroundColor: '#e8f2ff',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-    },
-    info: {
-      
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 6,
+        shadowOpacity: 0.26,
+        elevation: 8,
     }
 });
 

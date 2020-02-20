@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Grid from '../components/Grid';
 import BatButton from '../components/BatButton';
+import { Audio } from "expo-av";
 
 const generateNumbers = () => {
     let numbers = [];
