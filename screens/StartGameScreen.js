@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Grid from '../components/Grid';
+import Board from '../components/Board';
 import BatButton from '../components/BatButton';
 import { Audio } from "expo-av";
 
@@ -18,7 +18,7 @@ const StartGameScreen = ({ navigation, active }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-                <Grid numbers={generateNumbers()} active={active} navigation={navigation}/>
+                <Board numbers={generateNumbers()} active={active} navigation={navigation}/>
                 <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}

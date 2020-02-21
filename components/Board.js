@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Cell from './Cell';
 import Info from './Info';
 
-const Grid = ({navigation, numbers, active}) => {
+const Board = ({navigation, numbers, active}) => {
     const [findNumber, setFindNumber] = useState(1);
     const [tries, setTries] = useState(3);
     const [restNums, setRestNums] = useState(35);
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Grid;
+export default Board;
