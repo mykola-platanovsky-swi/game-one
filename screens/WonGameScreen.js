@@ -13,11 +13,10 @@ const WonGameScreen = ({ navigation }) => {
                 <View style={styles.view}>
                     <BatButton
                         onPress={() => navigation.navigate('Records')}
-                        title="До Зали Слави!"
+                        title="До зали слави!"
                         customStyle={{backgroundColor: '#7704bf'}}
                     />
                 </View>
-                
             </View>
         </React.Fragment>
     );

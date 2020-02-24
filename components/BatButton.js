@@ -1,12 +1,33 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Audio } from 'expo-av';
 
-const BatButton = (props) => {
-    return (
-        <TouchableOpacity style={[styles.button, props.customStyle]} onPress={props.onPress}>
-            <Text style={styles.text}>{props.title}</Text>
-        </TouchableOpacity>
-    )
+class BatButton extends React.Component {
+    constructor(props) {
+        super(props);
+    };
+
+    async asyncPlaySound() {
+        const { sound } = await Audio.Sound.createAsync(
+            require('../assets/buttonBeep.wav'),
+            {
+                shouldPlay: true,
+            },
+        );
+        this.sound = sound;
+    }
+
+    playSound = () => {
+        this.asyncPlaySound();
+    }
+
+    render() {
+        return (
+            <TouchableOpacity style={[styles.button, this.props.customStyle]} onPress={() => { this.playSound(), this.props.onPress() }}>
+                <Text style={styles.text}>{this.props.title}</Text>
+            </TouchableOpacity>
+        );
+    }
 };
 
 const styles = StyleSheet.create({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Board from '../components/Board';
 import BatButton from '../components/BatButton';
@@ -14,16 +14,16 @@ const generateNumbers = () => {
     return numbers;
 }
 
-const StartGameScreen = ({ navigation, active }) => {
+const StartGameScreen = ({ navigation }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-                <Board numbers={generateNumbers()} active={active} navigation={navigation}/>
+                <Board numbers={generateNumbers()} navigation={navigation} />
                 <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
                         title="Додому"
-                        customStyle={{backgroundColor: '#0095ff'}}
+                        customStyle={{ backgroundColor: '#0095ff' }}
                     />
                 </View>
             </View>

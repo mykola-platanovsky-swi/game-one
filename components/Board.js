@@ -1,14 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Cell from './Cell';
 import Info from './Info';
+import { Audio } from "expo-av";
 
-const Board = ({navigation, numbers, active}) => {
+const Board = ({ navigation, numbers }) => {
     const [findNumber, setFindNumber] = useState(1);
     const [tries, setTries] = useState(3);
     const [restNums, setRestNums] = useState(35);
-    const [isActive, setIsActive] = useState(active);
-    
+    const [isActive, setIsActive] = useState(true);
+
+    const sound = new Audio.Sound();
+
+    const loadAndPlay = () => {
+        (async () => {
+            await sound.loadAsync(require('../assets/game.mp3'));
+            sound.playAsync();
+            console.log('loadAndPlay');
+        })();
+    }
+
+    const stopPlay = () => {
+        if(sound != null && sound != undefined)
+        {
+            setIsActive(false);
+            sound.stopAsync();
+            console.log('stopPlaying');
+        }
+    }
+
+    useEffect(() => {
+        loadAndPlay();
+        console.log('useEffect');
+        return () => stopPlay();
+    }, []);
+
     const handleSelectedNum = (num) => {
         if (tries > 0 && restNums > 0) {
             if (num !== findNumber) {
@@ -16,12 +42,12 @@ const Board = ({navigation, numbers, active}) => {
             }
             else {
                 setFindNumber(num + 1);
-                setRestNums(restNums-1);
+                setRestNums(restNums - 1);
             }
         }
         else {
             setIsActive(false);
-            if(tries >= 0 && restNums === 0)
+            if (tries >= 0 && restNums === 0)
                 navigation.navigate('Won');
             else
                 navigation.navigate('LostGame');
