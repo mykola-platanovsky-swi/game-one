@@ -41,7 +41,7 @@ const Board = ({ navigation, numbers }) => {
             else {
                 setFindNumber(num + 1);
                 setRestNums(restNums - 1);
-                Vibration.vibrate(100);
+                Vibration.vibrate(70);
             }
         }
         else {
