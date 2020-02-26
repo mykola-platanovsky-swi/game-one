@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Board from '../components/Board';
 import BatButton from '../components/BatButton';
-import { Audio } from "expo-av";
 
 const generateNumbers = () => {
     let numbers = [];

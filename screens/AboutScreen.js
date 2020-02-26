@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import BatButton from '../components/BatButton';
+import SpeechButton from '../components/SpeechButton';
 
 const AboutScreen = ({ navigation }) => {
     return (
         <React.Fragment>
             <View style={styles.container}>
-            <View><Text style={styles.text}>Презентація React Native 26.02.2020</Text></View>
+            <SpeechButton/>
+            <View><Text style={styles.text}>Презентація React Native 02.03.2020</Text></View>
                 <View><Text style={styles.text}>@mplata</Text></View>
                 <View style={styles.viewButton}>
                     <BatButton

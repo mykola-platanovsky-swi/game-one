@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Vibration } from 'react-native';
 import Cell from './Cell';
 import Info from './Info';
 import { Audio } from "expo-av";
@@ -16,7 +16,6 @@ const Board = ({ navigation, numbers }) => {
         (async () => {
             await sound.loadAsync(require('../assets/game.mp3'));
             sound.playAsync();
-            console.log('loadAndPlay');
         })();
     }
 
@@ -25,13 +24,11 @@ const Board = ({ navigation, numbers }) => {
         {
             setIsActive(false);
             sound.stopAsync();
-            console.log('stopPlaying');
         }
     }
 
     useEffect(() => {
         loadAndPlay();
-        console.log('useEffect');
         return () => stopPlay();
     }, []);
 
@@ -39,10 +36,12 @@ const Board = ({ navigation, numbers }) => {
         if (tries > 0 && restNums > 0) {
             if (num !== findNumber) {
                 setTries(tries - 1);
+                Vibration.vibrate(500);
             }
             else {
                 setFindNumber(num + 1);
                 setRestNums(restNums - 1);
+                Vibration.vibrate(100);
             }
         }
         else {
