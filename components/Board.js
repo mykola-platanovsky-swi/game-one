@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         width: 350,
         height: 350,
         marginTop: 30,
-        backgroundColor: '#e8f2ff',
+        backgroundColor: '#000',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
