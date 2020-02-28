@@ -3,6 +3,8 @@ import { View, StyleSheet, Vibration } from 'react-native';
 import Cell from './Cell';
 import Info from './Info';
 import { Audio } from "expo-av";
+import AnimatedItem from './AnimatedItem';
+
 
 const Board = ({ navigation, numbers }) => {
     const [findNumber, setFindNumber] = useState(1);
@@ -20,8 +22,7 @@ const Board = ({ navigation, numbers }) => {
     }
 
     const stopPlay = () => {
-        if(sound != null && sound != undefined)
-        {
+        if (sound != null && sound != undefined) {
             setIsActive(false);
             sound.stopAsync();
         }
@@ -56,7 +57,9 @@ const Board = ({ navigation, numbers }) => {
     return (
         <View style={styles.container}>
             <Info next={findNumber} active={isActive} try={tries} style={styles.info} />
+            
             <View style={styles.grid}>
+            <AnimatedItem/>
                 {numbers.map((number) => <Cell key={number.toString()} value={number} onReturnNum={handleSelectedNum} />)}
             </View>
         </View>
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     grid: {
         minWidth: 310,

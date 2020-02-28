@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Board from '../components/Board';
 import BatButton from '../components/BatButton';
 
+
 const generateNumbers = () => {
     let numbers = [];
 
@@ -15,9 +16,9 @@ const generateNumbers = () => {
 
 const StartGameScreen = ({ navigation }) => {
     return (
-        <React.Fragment>
+        <React.Fragment>        
             <View style={styles.container}>
-                <Board numbers={generateNumbers()} navigation={navigation} />
+                <Board numbers={generateNumbers()} navigation={navigation} />                
                 <View style={styles.viewButton}>
                     <BatButton
                         onPress={() => navigation.navigate('Welcome')}
@@ -26,6 +27,7 @@ const StartGameScreen = ({ navigation }) => {
                     />
                 </View>
             </View>
+            
         </React.Fragment>
     );
 };
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-around',        
     },
     viewButton: {
         width: '90%',
