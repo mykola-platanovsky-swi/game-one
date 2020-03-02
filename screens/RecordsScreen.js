@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground } from 'react-native';
 import BatButton from '../components/BatButton';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -23,7 +23,7 @@ function Item({ title, score }) {
 
 const RecordsScreen = ({ navigation }) => {
         return (
-            <React.Fragment>
+            <ImageBackground source={require('../assets/bckgnd1.jpg')} style={{width: '100%', height: '100%'}}>
             <View style={styles.container}>
                 <View><Text style={styles.header}>Зала слави ім. Чака</Text></View>
                 <FlatList
@@ -39,14 +39,14 @@ const RecordsScreen = ({ navigation }) => {
                     />
                 </View>
             </View>
-        </React.Fragment>
+        </ImageBackground>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#c9e0ff',
+        //backgroundColor: '#c9e0ff',
         alignItems: 'center',
     },
     viewButton: {
@@ -54,12 +54,12 @@ const styles = StyleSheet.create({
         paddingVertical: 50,
     },
     title: {        
-        fontSize: 20,
+        fontSize: 18,
         color: '#fff'
     },
     header: {
         fontSize: 23,
-        color: '#000',
+        color: '#fff',
         padding: 20
     },
     item: {
