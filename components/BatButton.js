@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     button: {
         padding: 15,
-        borderRadius: 10,
+        borderRadius: 20,
         height: 60,
         shadowColor: 'black',
         shadowOffset: { width: 0, height: 2 },

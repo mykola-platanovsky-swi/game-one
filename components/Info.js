@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: 5,
         flexDirection: 'row',
-        width: '90%',
-        height: 70,
-        backgroundColor: '#FFEEDB',
-        padding: 5
-
+        width: 330,
+        height: 60,
+        backgroundColor: '#fff',
+        padding: 5,
+        borderRadius: 10
+        
     },
     advice: {
         flex: 1,

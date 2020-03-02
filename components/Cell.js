@@ -19,10 +19,11 @@ const styles = StyleSheet.create({
         height: "16%",
         borderWidth: 1,
         backgroundColor: '#CAE1F1',
-        borderColor: '#abccf7',
+        borderColor: '#fff',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 1
+        margin: 1, 
+        borderRadius: 15
     },
     text: {
         fontSize: 19
