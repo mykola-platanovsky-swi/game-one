@@ -1,13 +1,10 @@
-// from:
-// https://snack.expo.io/@charliecruzan/speechexample?session_id=snack-session-AFcLiKebZ&preview=false&platform=ios&iframeId=avchylsvxl&theme=light
-
 import React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import Constants from 'expo-constants';
 import * as Speech from 'expo-speech';
 
 const speak = () => {
-    var thingToSay = 'Thank you for your attention. Special for SoftServe and A3-B2 unit! This app is sponsored by Chuck Norris! I hope you liked this app.';
+    var thingToSay = 'Excuse me for my voice. I got a cold! Thank you for your attention. Special for SoftServe and A3-B2 unit! This app is sponsored by Chuck Norris! I hope you liked this app. Bye!';
     Speech.speak(thingToSay);
 }
 

@@ -9,7 +9,7 @@ class BatButton extends React.Component {
 
     async asyncPlaySound() {
         const { sound } = await Audio.Sound.createAsync(
-            require('../assets/buttonBeep.wav'),
+            require('../assets/buttonBeep.mp3'),
             {
                 shouldPlay: true,
             },
