@@ -3,6 +3,8 @@ import { View, StyleSheet, Vibration } from 'react-native';
 import Cell from './Cell';
 import Info from './Info';
 import { Audio } from "expo-av";
+import AnimatedItem from './AnimatedItem';
+
 
 const Board = ({ navigation, numbers }) => {
     const [findNumber, setFindNumber] = useState(1);
@@ -20,8 +22,7 @@ const Board = ({ navigation, numbers }) => {
     }
 
     const stopPlay = () => {
-        if(sound != null && sound != undefined)
-        {
+        if (sound != null && sound != undefined) {
             setIsActive(false);
             sound.stopAsync();
         }
@@ -55,7 +56,7 @@ const Board = ({ navigation, numbers }) => {
 
     return (
         <View style={styles.container}>
-            <Info next={findNumber} active={isActive} try={tries} style={styles.info} />
+            <Info next={findNumber} active={isActive} try={tries} />
             <View style={styles.grid}>
                 {numbers.map((number) => <Cell key={number.toString()} value={number} onReturnNum={handleSelectedNum} />)}
             </View>
@@ -68,22 +69,22 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     grid: {
         minWidth: 310,
         minHeight: 310,
-        width: 350,
-        height: 350,
+        width: 330,
+        height: 330,
         marginTop: 30,
-        backgroundColor: '#000',
+        //backgroundColor: '#000',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 6,
-        shadowOpacity: 0.26,
+        //shadowColor: 'black',
+        //shadowOffset: { width: 0, height: 2 },
+        //shadowRadius: 6,
+        //shadowOpacity: 0.26,
         elevation: 8,
     }
 });

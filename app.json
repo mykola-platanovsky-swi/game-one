@@ -8,7 +8,7 @@
       "ios",
       "android",
       "web"
-    ],    
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/sponsor.jpg",
@@ -25,7 +25,7 @@
     ],
     "android": {
       "package": "mplata.game.one",
-      "versionCode": 1.0
+      "versionCode": 1
     },
     "ios": {
       "supportsTablet": true

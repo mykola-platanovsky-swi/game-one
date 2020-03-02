@@ -7,7 +7,7 @@ import Constants from 'expo-constants';
 import * as Speech from 'expo-speech';
 
 const speak = () => {
-    var thingToSay = 'I want to thank you for your attention. Special for SoftServe and A3-B2 unit! This app is sponsored by Chuck Norris! I hope you liked this app.';
+    var thingToSay = 'Thank you for your attention. Special for SoftServe and A3-B2 unit! This app is sponsored by Chuck Norris! I hope you liked this app.';
     Speech.speak(thingToSay);
 }
 
