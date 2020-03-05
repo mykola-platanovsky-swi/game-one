@@ -1,2 +1,2 @@
 # game-one
-Run npm install
+Run command: "npm install" in terminal from Visual Studio Code
