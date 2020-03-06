@@ -30,6 +30,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "Demo game for presentation"
+    "description": "Demo game for presentation",
+    "githubUrl": "https://github.com/NikosNovak/game-one"
   }
 }
